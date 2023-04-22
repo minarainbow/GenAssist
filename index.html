@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>AVscript: Accessible Video Editing with Audio-Visual Scripts</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,28 +52,32 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title publication-title">AVscript: Accessible Video Editing with Audio-Visual Scripts</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                  <a href="http://www.minahuh.com" target="_blank">Mina Huh</a><sup>1,2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.saelyne.com/" target="_blank">Saelyne Yang</a><sup>3</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.yihaopeng.tw/" target="_blank">Yi-Hao Peng</a><sup>4</sup>,</span>
+                <span class="author-block">
+                  <a href="https://xac.is/" target="_blank">Xiang 'Anthony' Chen</a><sup>5</sup>,</span>
+                <span class="author-block">
+                  <a href="http://younghokim.net/" target="_blank">Young-Ho Kim</a><sup>2</sup>,</span>
+                <span class="author-block">
+                  <a href="http://www.amypavel.com" target="_blank">Amy Pavel</a><sup>1</sup>,</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">UT Austin<sup>1</sup>, Naver AI<sup>2</sup>, KAIST<sup>3</sup>, CMU<sup>4</sup>, UCLA<sup>5</sup><br>ACM CHI 2023</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://dl.acm.org/doi/10.1145/3544548.3581494" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,7 +87,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,10 +95,10 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -102,11 +106,11 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2302.14117" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -127,13 +131,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/teaser.jpg" />
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        <b>AVscript</b> is an accessible text-based video editing tool that enables blind and low-vision creators to edit videos
+        efficiently using a screen reader. The <b>audio-visual script</b> provides a narration transcript segmented by scenes, scene descriptions, and highlighted visual errors (<i>e.g.,</i> blur, bad lighting).
       </h2>
     </div>
   </div>
@@ -148,7 +149,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Sighted and blind and low vision (BLV) creators alike use videos to communicate with broad audiences. 
+            Yet, video editing remains inaccessible to BLV creators.
+            Our formative study revealed that current video editing tools make it difficult to access the visual content, assess the visual quality, and efficiently navigate the timeline.
+            We present AVscript, an accessible text-based video editor. AVscript enables users to edit their video using a script that embeds the video's visual content, visual errors (<i>e.g.</i>, dark or blurred footage), and speech. Users can also efficiently navigate between scenes and visual errors or locate objects in the frame or spoken words of interest.
+            A comparison study (N=12) showed that AVscript significantly lowered BLV creators' mental demands while increasing confidence and independence in video editing. We further demonstrate the potential of AVscript through an exploratory study (N=3) where BLV creators edited their own footage.
           </p>
         </div>
       </div>
@@ -158,47 +163,75 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="title is-3">System</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/video-pane.jpg" width="50%"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        AVscript’s video pane provides two types of audio notifications: scene change notifications and visual error notifications. When paused, users can activate inspect mode to access
+        detected objects in the current frame.
       </h2>
+      <br><br><hr style="height: 1.2px; background-color: lightgray;"><br><br>
+      <img src="static/images/outline.jpg" width="70%"/>
+      <h2 class="subtitle has-text-centered">
+        AVscript’s outline pane displays a navigable summary of the audio-visual script including the high-level
+        scenes and potential edit points, such as pauses and visual errors.
+      </h2>
+      <br><br><hr style="height: 1.2px; background-color: lightgray;"><br><br>
+      <img src="static/images/search.jpg" width="60%"/>
+      <h2 class="subtitle has-text-centered">
+        AVscript supports search over the transcribed
+        speech and visual objects in the video. BLV creators can skim
+        the results and click on a search result to jump to the corresponding point in the video.
+      </h2>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
+<hr style="height: 1.2px; background-color: lightgray;">
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Pipeline</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/pipeline.jpg" />
+      <h2 class="subtitle has-text-centered">
+        To segment the footage into multiple scenes, we detect objects in each frame using the nouns extracted from the transcript
+        as custom vocabulary. Then, we segment the footage when there is a salient change in the objects detected in nearby frames.
+        For each scene, we caption the first non-blurry frame, then use as the scene’s title in the audio-visual script.
+      </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr style="height: 1.2px; background-color: lightgray;">
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Evaluation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/evaluation.jpg" width="70%" style="margin-right: 20%;"/>
+          <h2 class="subtitle has-text-centered">
+            After the video editing tasks, we measured the cognitive load using NASA-TLX. AVscript significantly outperformed users’ own video editing tools in mental demand, temporal demand, effort, and frustration.
+            AVscript was also rated significantly better in the confidence in the output, independence in reviewing output, and
+            helpfulness in identifying errors.
+        </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
@@ -211,7 +244,7 @@
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Hj9sQrULzw4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -221,64 +254,28 @@
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{10.1145/3544548.3581494,
+        author = {Huh, Mina and Yang, Saelyne and Peng, Yi-Hao and Chen, Xiang 'Anthony' and Kim, Young-Ho and Pavel, Amy},
+        title = {AVscript: Accessible Video Editing with Audio-Visual Scripts},
+        year = {2023},
+        isbn = {9781450394215},
+        publisher = {Association for Computing Machinery},
+        address = {New York, NY, USA},
+        url = {https://doi.org/10.1145/3544548.3581494},
+        doi = {10.1145/3544548.3581494},
+        abstract = {Sighted and blind and low vision (BLV) creators alike use videos to communicate with broad audiences. Yet, video editing remains inaccessible to BLV creators. Our formative study revealed that current video editing tools make it difficult to access the visual content, assess the visual quality, and efficiently navigate the timeline. We present &nbsp;AVscript, an accessible text-based video editor. &nbsp;AVscript enables users to edit their video using a script that embeds the video’s visual content, visual errors (e.g., dark or blurred footage), and speech. Users can also efficiently navigate between scenes and visual errors or locate objects in the frame or spoken words of interest. A comparison study (N=12) showed that &nbsp;AVscript significantly lowered BLV creators’ mental demands while increasing confidence and independence in video editing. We further demonstrate the potential of &nbsp;AVscript through an exploratory study (N=3) where BLV creators edited their own footage.},
+        booktitle = {Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
+        articleno = {796},
+        numpages = {17},
+        keywords = {video, accessibility, authoring tools},
+        location = {Hamburg, Germany},
+        series = {CHI '23}
+        }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -292,7 +289,7 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 

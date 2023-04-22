@@ -28,8 +28,6 @@ body {
 }
 
 
-.publication-title {
-}
 
 .publication-banner {
   max-height: parent;
@@ -49,6 +47,7 @@ body {
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
+    font-size: 35px;
 }
 
 .publication-authors {
