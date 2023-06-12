@@ -5,8 +5,8 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:title" content=""/>
+  <meta property="og:description" content=""/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>AVscript: Accessible Video Editing with Audio-Visual Scripts</title>
+  <title>GenAssist: Making Image Generation Accessible</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -36,6 +36,7 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -52,25 +53,19 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title publication-title">AVscript: Accessible Video Editing with Audio-Visual Scripts</h1>
+            <h1 class="title publication-title">GenAssist: Making Image Generation Accessible</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
                 <span class="author-block">
-                  <a href="http://www.minahuh.com" target="_blank">Mina Huh</a><sup>1,2</sup>,</span>
+                  <a href="http://www.minahuh.com" target="_blank">Mina Huh</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://www.saelyne.com/" target="_blank">Saelyne Yang</a><sup>3</sup>,</span>
-                <span class="author-block">
-                  <a href="https://www.yihaopeng.tw/" target="_blank">Yi-Hao Peng</a><sup>4</sup>,</span>
-                <span class="author-block">
-                  <a href="https://xac.is/" target="_blank">Xiang 'Anthony' Chen</a><sup>5</sup>,</span>
-                <span class="author-block">
-                  <a href="http://younghokim.net/" target="_blank">Young-Ho Kim</a><sup>2</sup>,</span>
+                  <a href="https://www.yihaopeng.tw/" target="_blank">Yi-Hao Peng</a><sup>2</sup>,</span>
                 <span class="author-block">
                   <a href="http://www.amypavel.com" target="_blank">Amy Pavel</a><sup>1</sup>,</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">UT Austin<sup>1</sup>, Naver AI<sup>2</sup>, KAIST<sup>3</sup>, CMU<sup>4</sup>, UCLA<sup>5</sup><br>ACM CHI 2023</span>
+                    <span class="author-block">UT Austin<sup>1</sup>, CMU<sup>2</sup>, <br>ACM UIST 2023</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -98,15 +93,15 @@
                   </span> -->
 
                   <!-- Github link -->
-                  <!-- <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <span class="link-block">
+                    <a href="https://github.com/minarainbow/GenAssist" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
-                </span> -->
+                </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -126,20 +121,22 @@
   </div>
 </section>
 
-
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/teaser.jpg" />
+      <img src="static/images/teaser.jpg" style="margin-bottom: 2%;" />
       <h2 class="subtitle has-text-centered">
-        <b>AVscript</b> is an accessible text-based video editing tool that enables blind and low-vision creators to edit videos
-        efficiently using a screen reader. The <b>audio-visual script</b> provides a narration transcript segmented by scenes, scene descriptions, and highlighted visual errors (<i>e.g.,</i> blur, bad lighting).
+        <b>GenAssist</b> is a system that enables blind or low vision creators to generate images by providing rich visual descriptions
+        of the generation results. With the given text prompt and a set of generated images, GenAssist uses a large language model (GPT4) to generate prompt verification questions based on the text prompt, and image-based questions based on individual image
+        captions (BLIP-2). GenAssist also extracts the visual content and style of the images using the vision-language model (CLIP, BLIP2), and object detection model (Detic). All of the information is then summarized using the GPT-4 to generate the <b>comparison
+        descriptions </b> and <b> per-image descriptions </b>.
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -149,11 +146,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Sighted and blind and low vision (BLV) creators alike use videos to communicate with broad audiences. 
-            Yet, video editing remains inaccessible to BLV creators.
-            Our formative study revealed that current video editing tools make it difficult to access the visual content, assess the visual quality, and efficiently navigate the timeline.
-            We present AVscript, an accessible text-based video editor. AVscript enables users to edit their video using a script that embeds the video's visual content, visual errors (<i>e.g.</i>, dark or blurred footage), and speech. Users can also efficiently navigate between scenes and visual errors or locate objects in the frame or spoken words of interest.
-            A comparison study (N=12) showed that AVscript significantly lowered BLV creators' mental demands while increasing confidence and independence in video editing. We further demonstrate the potential of AVscript through an exploratory study (N=3) where BLV creators edited their own footage.
+            Blind or low vision (BLV) creators use images to communicate with sighted audience members. However, creating or retrieving images remains challenging as it is difficult for BLV creators to use existing graphical authoring tools or assess image search results. Thus, creators describe their desired images to sighted people who create or retrieve the images or limit the types of images they create. While text-to-image generation models could let creators generate multiple high-fidelity images based on a text description (i.e. prompt), it is difficult to assess the content and quality of the generated image. We propose GenAssist, a system to make text-to-image generation accessible. Using our interface, creators can verify whether generated image candidates followed their prompt, access additional details added to the image but not specified in the prompt, and skim a summary of similarities and differences between image candidates. To power the interface, GenAssist uses a large language model to generate visual questions, vision-language models to extract answers, and a large language model to summarize the results. Our study with 12 BLV creators demonstrated that GenAssist enables and simplifies the process of image selection and generation, making visual authoring more user-friendly and accessible to all.
           </p>
         </div>
       </div>
@@ -167,28 +160,26 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">System</h2>
+      <h2 class="title is-3">Prompt Verification</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <img src="static/images/video-pane.jpg" width="50%"/>
-      <h2 class="subtitle has-text-centered">
-        AVscript’s video pane provides two types of audio notifications: scene change notifications and visual error notifications. When paused, users can activate inspect mode to access
-        detected objects in the current frame.
+      <img src="static/images/prompt-verification1.jpg" width="70%"/>
+      <h2 class="subtitle">
+        To help users assess how well their generated
+        images adhered to their prompt, GenAssist provides prompt verification. 
+        To perform prompt verification, we first use GPT-4
+        to generate visual questions that verify each part of the prompt.
+      </h2><br><br>
+      <img src="static/images/prompt-verification2.jpg" width="70%"/>
+      <h2 class="subtitle">
+        We use BLIP-2 to generate answers to the prompt verification questions for each of
+        the four generated images.
+      </h2><br><br>
+      <img src="static/images/prompt-verification3.jpg" width="70%"/>
+      <h2 class="subtitle">
+        To help users quickly find which images do or do not adhere to the prompt, we use GPT-4 to summarize the responses to each question.
       </h2>
-      <br><br><hr style="height: 1.2px; background-color: lightgray;"><br><br>
-      <img src="static/images/outline.jpg" width="70%"/>
-      <h2 class="subtitle has-text-centered">
-        AVscript’s outline pane displays a navigable summary of the audio-visual script including the high-level
-        scenes and potential edit points, such as pauses and visual errors.
-      </h2>
-      <br><br><hr style="height: 1.2px; background-color: lightgray;"><br><br>
-      <img src="static/images/search.jpg" width="60%"/>
-      <h2 class="subtitle has-text-centered">
-        AVscript supports search over the transcribed
-        speech and visual objects in the video. BLV creators can skim
-        the results and click on a search result to jump to the corresponding point in the video.
-      </h2>
-        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -199,23 +190,163 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Pipeline</h2>
+      <h2 class="title is-3">Visual Content & Style Extraction</h2><br>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <img src="static/images/pipeline.jpg" />
-      <h2 class="subtitle has-text-centered">
-        To segment the footage into multiple scenes, we detect objects in each frame using the nouns extracted from the transcript
-        as custom vocabulary. Then, we segment the footage when there is a salient change in the objects detected in nearby frames.
-        For each scene, we caption the first non-blurry frame, then use as the scene’s title in the audio-visual script.
-      </h2>
+          <img src="static/images/content-style1.jpg" width="70%"/><br>
+          <h2 class="subtitle has-text-centered">
+            To enable access to image content and style details that were not specified in the prompt, we extract the visual content and visual style of the generated image candidates. 
+            We answer 5 questions (setting, subjects, emotion, likely use, colors) using Visual Question Answering with BLIP-2:
+          </h2><br><br>
+          <img src="static/images/content-style2.jpg" width="70%"/><br>
+          <h2 class="subtitle has-text-centered">
+            To extract objects information, we use Dectic with an open detection vocabulary to enable users to access all objects:
+          </h2><br><br>
+          <img src="static/images/content-style3.jpg" width="70%"/><br>
+          <h2 class="subtitle has-text-centered">
+            To extract information of medium, lighting, perspective, and errors, we answer the following questions for each image candidate by using CLIP to determine the similarity between the image and a limited set of answer choices:
+          </h2>
         </div>
       </div>
     </div>
   </div>
 </section>
-<hr style="height: 1.2px; background-color: lightgray;">
 
-<section class="hero is-small">
+<!-- Image carousel -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-centered">
+      <h2 class="title is-3">Description Summarization</h2>
+      <div id="results-carousel" class="carousel results-carousel is-centered ">
+       <div class="item">
+        <!-- Your image here -->
+        <div class="row" style="margin-bottom: 3%;">
+          <div class="col-4">
+            <img src="static/images/example1.png" width="80%" style="margin-left: 15%;" />
+          </div>
+          <div class="col-8">
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Prompt</b>
+            </h2>
+            <h2 class="subtitle is-5" style="font-style: italic;">
+              "A young chef is cooking the dinner for his parents"
+            </h2>
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Similarities</b>
+            </h2>
+            <h2 class="subtitle is-5">
+              The four images are all related to cooking/food preparation. They all have a natural lighting source, and the emotions depicted in all of them are happy. 
+            </h2>
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Differences</b>
+            </h2>
+            <h2 class="subtitle is-5">
+              The differences among these images include medium (vector art, stock photo), focus on subject (a boy, a father, a mother), availability of ingredients, kitchen size, utensils being used, whether family members are wearing aprons, whether the family members are cooking individually or collectively, etc.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="row" style="margin-bottom: 3%;">
+          <div class="col-4">
+            <img src="static/images/example1-1.png" width="80%" style="margin-left: 15%;" />
+          </div>
+          <div class="col-7 align-self-center">
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Prompt</b>
+            </h2>
+            <h2 class="subtitle is-5" style="font-style: italic;">
+              "A young chef is cooking the dinner for his parents"
+            </h2>
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Per Image Description - Image 1</b>
+            </h2>
+            <h2 class="subtitle is-5">
+              A colorful cartoon illustration of a father and his two young children cooking in a bright kitchen with natural lighting. The kitchen countertop is brown and there is a happy expression on the father's face as there is a smell of food in the air. This illustration is likely to be used on a website.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="row" style="margin-bottom: 3%;">
+          <div class="col-4">
+            <img src="static/images/example1-2.png" width="80%" style="margin-left: 15%;" />
+          </div>
+          <div class="col-7 align-self-center">
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Prompt</b>
+            </h2>
+            <h2 class="subtitle is-5" style="font-style: italic;">
+              "A young chef is cooking the dinner for his parents"
+            </h2>
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Per Image Description - Image 2</b>
+            </h2>
+            <h2 class="subtitle is-5">
+              In this stock photo, a young boy wears a chef's hat as he stands in a modern kitchen. He is preparing a salad using a knife while ingredients are on the kitchen counter. The boy looks happy. The colors used are black, white, red and green. This image would likely be used in a cookbook to show children preparing healthy meals.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="row" style="margin-bottom: 3%;">
+          <div class="col-4">
+            <img src="static/images/example1-3.png" width="80%" style="margin-left: 15%;" />
+          </div>
+          <div class="col-7 align-self-center">
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Prompt</b>
+            </h2>
+            <h2 class="subtitle is-5" style="font-style: italic;">
+              "A young chef is cooking the dinner for his parents"
+            </h2>
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Per Image Description - Image 3</b>
+            </h2>
+            <h2 class="subtitle is-5">
+              In this vector art image, a family is cooking together in a well-lit kitchen. There is a young boy chef with a man and woman, preparing food with pots, pans and spoons on a gas stove. They're happy while cooking snacks for their family. The main colors used are blue and white. This image would fit in a children's cooking class.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="row" style="margin-bottom: 3%;">
+          <div class="col-4">
+            <img src="static/images/example1-4.png" width="80%" style="margin-left: 15%;" />
+          </div>
+          <div class="col-7 align-self-center">
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Prompt</b>
+            </h2>
+            <h2 class="subtitle is-5" style="font-style: italic;">
+              "A young chef is cooking the dinner for his parents"
+            </h2>
+            <h2 class="subtitle is-5" style="margin-bottom: 0%;">
+              <b>Per Image Description - Image 4</b>
+            </h2>
+            <h2 class="subtitle is-5">
+              A cartoon of a family preparing food in a brightly lit small kitchen with natural lighting. The subjects are a young man chef, a father, a mother standing near a counter with pots, pans, and utensils. There is a large window in the kitchen. 
+            </h2>
+          </div>
+        </div>
+      </div>
+  </div><br><br>
+  <h2 class="subtitle has-text-centered">
+    To enable users to quickly assess their image results, we summarize
+    the results from our pipeline (prompt verification, prompt guideline, and caption-detail
+    question-answer pairs for each image) to create a summary of <b>image similarities and differences</b> and a <b>per image description</b> for
+    each image using GPT-4.
+  </h2>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Evaluation</h2>
@@ -231,26 +362,24 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/Hj9sQrULzw4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
@@ -259,23 +388,7 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{10.1145/3544548.3581494,
-        author = {Huh, Mina and Yang, Saelyne and Peng, Yi-Hao and Chen, Xiang 'Anthony' and Kim, Young-Ho and Pavel, Amy},
-        title = {AVscript: Accessible Video Editing with Audio-Visual Scripts},
-        year = {2023},
-        isbn = {9781450394215},
-        publisher = {Association for Computing Machinery},
-        address = {New York, NY, USA},
-        url = {https://doi.org/10.1145/3544548.3581494},
-        doi = {10.1145/3544548.3581494},
-        abstract = {Sighted and blind and low vision (BLV) creators alike use videos to communicate with broad audiences. Yet, video editing remains inaccessible to BLV creators. Our formative study revealed that current video editing tools make it difficult to access the visual content, assess the visual quality, and efficiently navigate the timeline. We present &nbsp;AVscript, an accessible text-based video editor. &nbsp;AVscript enables users to edit their video using a script that embeds the video’s visual content, visual errors (e.g., dark or blurred footage), and speech. Users can also efficiently navigate between scenes and visual errors or locate objects in the frame or spoken words of interest. A comparison study (N=12) showed that &nbsp;AVscript significantly lowered BLV creators’ mental demands while increasing confidence and independence in video editing. We further demonstrate the potential of &nbsp;AVscript through an exploratory study (N=3) where BLV creators edited their own footage.},
-        booktitle = {Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
-        articleno = {796},
-        numpages = {17},
-        keywords = {video, accessibility, authoring tools},
-        location = {Hamburg, Germany},
-        series = {CHI '23}
-        }</code></pre>
+      <pre><code>Coming soon...</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
