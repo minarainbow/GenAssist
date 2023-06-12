@@ -845,9 +845,9 @@ var bulmaCarousel = function (_EventEmitter) {
       });
       this._transitioner.init().apply(true, this._setHeight.bind(this));
 
-    //   if (this.options.autoplay) {
-    //     this._autoplay.init().start();
-    //   }
+      if (this.options.autoplay) {
+        this._autoplay.init().start();
+      }
     }
 
     /**
