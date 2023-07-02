@@ -132,5 +132,9 @@ body {
   font-size: smaller;
 }
 
+.huggingface-icon {
+  background: url('../images/huggingface.ico');
 
+  /* Other styles here */
+}
 

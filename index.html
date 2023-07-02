@@ -44,6 +44,9 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script type="module"
+  src="https://gradio.s3-us-west-2.amazonaws.com/3.35.2/gradio.js">
+  </script>
 </head>
 <body>
 
@@ -65,7 +68,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">UT Austin<sup>1</sup>, CMU<sup>2</sup>, <br>ACM UIST 2023</span>
+                    <span class="author-block">UT Austin<sup>1</sup>, CMU<sup>2</sup>, <br>ACM UIST 2023 (Conditionally Accepted)</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -91,9 +94,21 @@
                       <span>Supplementary</span>
                     </a>
                   </span> -->
+                 <!-- Demo link -->
+                 <span class="link-block">
+                  <a href="https://huggingface.co/spaces/mina1004h/GenAssist" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-image"></i>
+                  </span>
+                  <span>Hugging Face Demo</span>
+                </a>
+              </span>
+
+                  
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/minarainbow/GenAssist" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -101,7 +116,8 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
+
 
                 <!-- ArXiv abstract Link -->
                 <!-- <span class="link-block">
@@ -343,6 +359,26 @@
 </div>
 </section>
 <!-- End image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Examples</h2>
+      <div class="columns is-centered has-text-centered">
+        <iframe
+        src="https://mina1004h-genassist-demo.hf.space"
+        frameborder="0"
+        width="1200"
+        height="1200"
+      ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
 <!-- <section class="hero is-small">
   <div class="hero-body">
@@ -363,21 +399,21 @@
 </section> -->
 
 <!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
+<section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Supplementary Video</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/Hj9sQrULzw4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/yqH8P8Ml0FQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!-- End youtube video -->
 
 
