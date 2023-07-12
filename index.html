@@ -96,12 +96,12 @@
                   </span> -->
                  <!-- Demo link -->
                  <span class="link-block">
-                  <a href="https://huggingface.co/spaces/mina1004h/GenAssist" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+                  <a 
+                  class="external-link button is-normal is-rounded ">
                   <span class="icon">
                     <i class="fa fa-image"></i>
                   </span>
-                  <span>Hugging Face Demo</span>
+                  <span>Demo coming soon...</span>
                 </a>
               </span>
 
@@ -141,7 +141,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/teaser.jpg" style="margin-bottom: 2%;" />
+      <img src="static/images/teaser.jpg" style="margin-bottom: 2%;" alt="Teaser image that illustrates how GenAssist generates the comparison description and per image descriptions in the summary table. First, GenAssist takes the input of text prompt ``A young chef is cooking dinner for his parents'' and the four images generated using the prompt. Then, based on the prompt, GenAssist uses GPT4 to ask prompt verification questions and use BLIP2 to answer them. GenAssist also asks questions based on the individual image captions using GPT4 and BLIP2. In addition to prompt verification questions and image based questions, GenAssist also asks questions related to visual content and styles and answer them using BLIP2, Detic and CLIP. Finally, using all of the visual information, the comparison description (similarities and differences) and the per image descriptions are generated using GPT4."/>
       <h2 class="subtitle has-text-centered">
         <b>GenAssist</b> is a system that enables blind or low vision creators to generate images by providing rich visual descriptions
         of the generation results. With the given text prompt and a set of generated images, GenAssist uses a large language model (GPT4) to generate prompt verification questions based on the text prompt, and image-based questions based on individual image
@@ -179,19 +179,19 @@
       <h2 class="title is-3">Prompt Verification</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-      <img src="static/images/prompt-verification1.jpg" width="70%"/>
+      <img src="static/images/prompt-verification1.jpg" width="70%" alt="A figure that illustrates an example of prompt verification questions. On the left is the input with the instruction ``Generate visual questions that verify whether each part of the prompt is correct. Number the questions.'' and the input prompt ``A young chef is cooking dinner for his parents.'' On the right is the output prompt verification questions: 1. Is there a chef in the image? 2. How old is the young chef? 3. Is the young chef cooking the food? 4. Are the parents present in the image?"/>
       <h2 class="subtitle">
         To help users assess how well their generated
         images adhered to their prompt, GenAssist provides prompt verification. 
         To perform prompt verification, we first use GPT-4
         to generate visual questions that verify each part of the prompt.
       </h2><br><br>
-      <img src="static/images/prompt-verification2.jpg" width="70%"/>
+      <img src="static/images/prompt-verification2.jpg" width="70%" alt="A figure that illustrates an example of prompt verification questions and their answers for each of the four images. First question is ``Is there a chef in the image?'' and the answer is all yes for four images. Second question is ``How old is the young chef?'' and the first three images answer ``Young kid'' while the last image says ``Young man''. The third question is ``Is the young chef cooking food?'' and the answers are all yes for the four images. The final question is ``Are the parents present in the image?'' and the answer is all yes except for the second image."/>
       <h2 class="subtitle">
         We use BLIP-2 to generate answers to the prompt verification questions for each of
         the four generated images.
       </h2><br><br>
-      <img src="static/images/prompt-verification3.jpg" width="70%"/>
+      <img src="static/images/prompt-verification3.jpg" width="70%" alt="This figure illustrates the example of the summary descriptions for the prompt verification questions. For the question ``Is there a chef in the image?'', the summary description is ``Three images depict a young kid, while Image 4 depicts a young man.'' The second question ``Are the parents present in the image?'', the answer summary is ``Three images show parents present in the image, while image 2 does not.''"/>
       <h2 class="subtitle">
         To help users quickly find which images do or do not adhere to the prompt, we use GPT-4 to summarize the responses to each question.
       </h2>
@@ -207,16 +207,16 @@
       <h2 class="title is-3">Visual Content & Style Extraction</h2><br>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <img src="static/images/content-style1.jpg" width="70%"/><br>
+          <img src="static/images/content-style1.jpg" width="70%" alt="This image illustrates an example of content and style questions answered by BLIP-2. The answers are provided for the same tutorial images. For the question ``What is the setting of the image?'', the answers are all kitchen. For the question ``What are the subjects of the image?'', the answers are father and children for the first image, chef, kitchen and vegetables for the second image, father, mother and son for the third and fourth image. For the question ``What is the emotion of the image?'', all answers are happy. For the question about the usage ``Where would this image be used?'', the answers are ``on a website'', ``in a cookbook'', ``a children's cooking class'', and ``on a website''. Finally, for the question ``What are the main colors?'', the first image answers ``Brown, blue, yellow'', the second image answers ``Black, white, red, green'', the third image answers ``blue and white'', and the final image answers ``Red, yellow, green''."/><br>
           <h2 class="subtitle has-text-centered">
             To enable access to image content and style details that were not specified in the prompt, we extract the visual content and visual style of the generated image candidates. 
             We answer 5 questions (setting, subjects, emotion, likely use, colors) using Visual Question Answering with BLIP-2:
           </h2><br><br>
-          <img src="static/images/content-style2.jpg" width="70%"/><br>
+          <img src="static/images/content-style2.jpg" width="70%" alt="This figure shows an example of the object detection results using Detic per image. The first image depicts spoon, pot, cup, tub, apron, bowl, etc. The second image depicts spoon, sink, tomato, lettuce, hat, bowl, etc. The third image shows spoon, fork, knife, apple, sausage, plate, etc. The fourth image shows spoon, pot, window, flowerpot, plate, frog, etc."/><br>
           <h2 class="subtitle has-text-centered">
-            To extract objects information, we use Dectic with an open detection vocabulary to enable users to access all objects:
+            To extract objects information, we use Detic with an open detection vocabulary to enable users to access all objects:
           </h2><br><br>
-          <img src="static/images/content-style3.jpg" width="70%"/><br>
+          <img src="static/images/content-style3.jpg" width="70%" alt="This figures shows the answers related to content and style of the images that were retrieved using CLIP model. First for the medium of the image, image 1 answers cartoon, storybook, and illustration, image 2 answers a stock photo, image 3 answers vector art, and image 4 answers cartoon, storybook, and illustration. For the lighting of the image, all four images answer natural lighting. For the perspective of the images, image 1, 3 and 4 answer medium shot while the second image answers centered shot. For the errors in the image, only image 1 answers poorly drawn hands but not other three images."/><br>
           <h2 class="subtitle has-text-centered">
             To extract information of medium, lighting, perspective, and errors, we answer the following questions for each image candidate by using CLIP to determine the similarity between the image and a limited set of answer choices:
           </h2>
@@ -232,11 +232,11 @@
     <div class="container is-centered">
       <h2 class="title is-3">Description Summarization</h2>
       <div id="results-carousel" class="carousel results-carousel is-centered ">
-       <div class="item">
+       <div class="item" >
         <!-- Your image here -->
         <div class="row" style="margin-bottom: 3%;">
           <div class="col-4">
-            <img src="static/images/example1.png" width="80%" style="margin-left: 15%;" />
+            <img src="static/images/example1.png" width="80%" style="margin-left: 15%;"alt="A grid of four images generated using the prompt ``a young chef is cooking dinner for his parents.'' The first image is an illustration of a dad cooking with his two children. The second image is a photo of a young boy cooking alone in the kitchen. The third image is a vector art image that depicts parents and their son cooking. The fourth image is an illustration of parents and their son who is a young man cooking in the kitchen with a wide window." />
           </div>
           <div class="col-8">
             <h2 class="subtitle is-5" style="margin-bottom: 0%;">
@@ -264,7 +264,7 @@
         <!-- Your image here -->
         <div class="row" style="margin-bottom: 3%;">
           <div class="col-4">
-            <img src="static/images/example1-1.png" width="80%" style="margin-left: 15%;" />
+            <img src="static/images/example1-1.png" width="80%" style="margin-left: 15%;" alt="An illustration of a dad cooking with his two children." />
           </div>
           <div class="col-7 align-self-center">
             <h2 class="subtitle is-5" style="margin-bottom: 0%;">
@@ -286,7 +286,7 @@
         <!-- Your image here -->
         <div class="row" style="margin-bottom: 3%;">
           <div class="col-4">
-            <img src="static/images/example1-2.png" width="80%" style="margin-left: 15%;" />
+            <img src="static/images/example1-2.png" width="80%" style="margin-left: 15%;" alt="A photo of a young boy cooking alone in the kitchen."/>
           </div>
           <div class="col-7 align-self-center">
             <h2 class="subtitle is-5" style="margin-bottom: 0%;">
@@ -308,7 +308,7 @@
         <!-- Your image here -->
         <div class="row" style="margin-bottom: 3%;">
           <div class="col-4">
-            <img src="static/images/example1-3.png" width="80%" style="margin-left: 15%;" />
+            <img src="static/images/example1-3.png" width="80%" style="margin-left: 15%;" alt="A vector art image that depicts parents and their son cooking."/>
           </div>
           <div class="col-7 align-self-center">
             <h2 class="subtitle is-5" style="margin-bottom: 0%;">
@@ -330,7 +330,7 @@
         <!-- Your image here -->
         <div class="row" style="margin-bottom: 3%;">
           <div class="col-4">
-            <img src="static/images/example1-4.png" width="80%" style="margin-left: 15%;" />
+            <img src="static/images/example1-4.png" width="80%" style="margin-left: 15%;" alt="The fourth image is an illustration of parents and their son who is a young man cooking in the kitchen with a wide window."/>
           </div>
           <div class="col-7 align-self-center">
             <h2 class="subtitle is-5" style="margin-bottom: 0%;">
@@ -350,9 +350,8 @@
       </div>
   </div><br><br>
   <h2 class="subtitle has-text-centered">
-    To enable users to quickly assess their image results, we summarize
-    the results from our pipeline (prompt verification, prompt guideline, and caption-detail
-    question-answer pairs for each image) to create a summary of <b>image similarities and differences</b> and a <b>per image description</b> for
+    To enable users to quickly assess their image results, we summarize our pipeline results (prompt verification, prompt guideline, and caption-detail
+    question-answer pairs for each image) to create a <b>image similarities and differences</b> and a <b>per image description</b> for
     each image using GPT-4.
   </h2>
 </div>
