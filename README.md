@@ -1,6 +1,6 @@
 # [UIST 2023] GenAssist: Making Image Generation Accessible
 
-This is the repository for annotated data and model for this paper: </br>
+This is the repository for the paper: </br>
 
 > Mina Huh, Yi-Hao Peng, Amy Pavel
 >
