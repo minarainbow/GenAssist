@@ -11,7 +11,7 @@ This is the repository for annotated data and model for this paper: </br>
 ✨ Check out our [website](https://minahuh.com/GenAssist) for examples and presentation!
 
 
-# Abstract
+## Abstract
 Blind or low vision (BLV) creators use images to communicate with sighted audience members. 
 However, creating or retrieving images remains challenging as it is difficult for BLV creators to use existing graphical authoring tools or assess image search results. 
 Thus, creators describe their desired images to sighted people who create or retrieve the images or limit the types of images they create. 
