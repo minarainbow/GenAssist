@@ -2,10 +2,10 @@
 
 This is the repository for the paper: </br>
 
-> Mina Huh, Yi-Hao Peng, Amy Pavel
->
 > [GenAssist: Making Image Generation Accessible](https://dl.acm.org/doi/abs/10.1145/3586183.3606735).
 >
+> Mina Huh, Yi-Hao Peng, Amy Pavel
+> 
 > 🏆 Best Paper Award (top 1%)
 
 ✨ Check out our [website](https://minahuh.com/GenAssist) for examples and presentation!
